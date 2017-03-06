@@ -1,0 +1,127 @@
+/*音乐播放*/
+.music {
+	width: 1.6rem;
+	height: 1.6rem;
+	position: absolute;
+	right: .3rem;
+	top: .3rem;
+	z-index: 100;
+}
+
+.music .control {
+	width: 1.8rem;
+	height: 1.8rem;
+	background: url(../image/music_c0fda01.gif) transparent no-repeat center center;
+	background-size: contain;
+}
+
+.music .control .control-after {
+	width: 1rem;
+	height: 1rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -.5rem;
+	margin-left: -.5rem;
+	background: url(../image/music_off_8d94020.png) transparent no-repeat center center;
+	background-size: 100% 100%;
+	-webkit-animation: music_play 1.2s linear infinite;
+	animation: music_play 1.2s linear infinite;
+	z-index: -1
+}
+
+.music.stopped .control {
+	background: 0 0;
+}
+
+.music.stopped .control .control-after {
+	-webkit-animation: none;
+	animation: none;
+}
+
+@-webkit-keyframes music_play {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes music_play {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+/*音乐播放结束*/
+
+.page {
+	position: relative;
+}
+
+.page>* {
+	position: absolute;
+}
+
+
+/*第一页css*/
+
+.p1_1 {
+	width: 2rem;
+	height: 1rem;
+	left: 0.266667rem;
+	top: 0.4rem;
+}
+
+.p1_2 {
+	width: 0.4rem;
+	height: 0.4rem;
+	left: 0.266667rem;
+	top: 4.0rem;
+	opacity: 0;
+	transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+}
+
+.p1_2Ani {
+	animation: p1_2Ani 1s ease forwards;
+	-webkit-animation: p1_2Ani 1s ease forwards;
+}
+
+@keyframes p1_2Ani {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	50% {
+		transform: scale(2);
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes p1_2Ani {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.5);
+	}
+	50% {
+		-webkit-transform: scale(2);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.p2_1 {
+	width: 1.333333rem;
+	height: 0.666667rem;
+	left: 3rem;
+	top: 1rem;
+}

@@ -1,9 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <meta charset="utf-8">
-  </head>
-  <body>
-   <div>啊大大大</div>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>使用animate.css</title>
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
+    <!--<link rel="stylesheet" href="css/animate.css">-->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+</head>
+<body>
+    <div class="wp">
+        <div class="wp-inner">
+            <div class="page page1">
+                <div class="js-animate p1_1" data-animate="fadeIn" data-time="1" data-delay="0.2">bounce</div>
+                <div class="js-animate p1_2" data-animate="p1_2Ani" data-time="2" data-delay="0.5">2</div>
+            </div>
+            <div class="page page2">
+                <div class="js-animate p2_1" data-animate="bigEntrance" data-delay="0.5">bigEntrance</div>
+            </div>
+            <div class="page page3">
+                <div class="js-animate" data-animate="hatch" data-time="2" data-delay="0.5">hatch</div>
+            </div>
+            <div class="page page4">
+                <div class="js-animate" data-animate="floating" data-time="2" data-delay="0.5">floating</div>
+            </div>
+        </div>
+    </div>
+    <div id="music" class="music">		
+    	<audio id="music-audio" autoplay="true" preload="auto">
+			<source src="audio/happynewyear.mp3" type="audio/mp3">
+		</audio>		
+    	<div class="control">
+    		<div class="control-after"></div>
+    	</div>	
+    </div>
+    <span class="start"><b></b></span>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/zepto.fullpage.js"></script>
+    <script src="js/index.js"></script>
+</body>
 </html>
+
