@@ -15,16 +15,23 @@ $(function(){
 			var n = t.currentStyle ? t.currentStyle[e] : document.defaultView.getComputedStyle(t, !1)[e];
 			return "opacity" == e ? Math.round(100 * parseFloat(n)) : parseInt(n)
 		}
+
+    	var $page=$('.page'),
+    		$pl=$page.length,
+    		$arrIcon=$(".start");
+
         $('.wp-inner').fullpage({
             change: function (e) {
                 // 移除动画属性
-              	$('.page').eq(e.cur).find('.js-animate').each(function() {
+              	$page.eq(e.cur).find('.js-animate').each(function() {
                     $(this).removeClass($(this).data('animate')).hide();
                 });
+                // 最后一页移除箭头
+            	(+e.cur===$pl-1)?$arrIcon.hide():$arrIcon.show();
             },
             afterChange: function (e) {
                 // 添加动画属性
-                $('.page').eq(e.cur).find('.js-animate')
+                $page.eq(e.cur).find('.js-animate')
                     .each(function () {
                     	var delay = parseFloat($(this).data('delay'));
                     	var time = $(this).data('time')?parseFloat($(this).data('time')) : '';
